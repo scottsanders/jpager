@@ -40,6 +40,12 @@
     display: block;
     padding: 4px 10px;
     border: 1px solid black;
+    text-decoration: none;
+    color: black;
+  }
+  .jpaginate-current {
+    color: #fff;
+    background: #000;
   }
   </style>
 </head>
@@ -50,25 +56,15 @@
   </header>
   <div role="main">
     <ul class="products"> 
-      <li class="product">Product 1</li>
-      <li class="product">Product 2</li>
-      <li class="product">Product 3</li>
-      <li class="product">Product 4</li>
-      <li class="product">Product 5</li>
-      <li class="product">Product 6</li>
-      <li class="product">Product 7</li>
-      <li class="product">Product 8</li>
-      <li class="product">Product 9</li>
-      <li class="product">Product 10</li>
-      <li class="product">Product 11</li>
-      <li class="product">Product 12</li>
-      <li class="product">Product 13</li>
-      <li class="product">Product 14</li>
-      <li class="product">Product 15</li>
-      <li class="product">Product 16</li>
-      <li class="product">Product 17</li>
-      <li class="product">Product 18</li>
-      <li class="product">Product 19</li>
+      <li class="product" data-name="Product 1" data-price="16.00">Product 1 <br/> $16.00</li>
+      <li class="product" data-name="Product 2" data-price="20.00">Product 2 <br/> $20.00</li>
+      <li class="product" data-name="Product 3" data-price="12.00">Product 3 <br/> $12.00</li>
+      <li class="product" data-name="Product 4" data-price="40.00">Product 4 <br/> $40.00</li>
+      <li class="product" data-name="Product 5" data-price="51.00">Product 5 <br/> $51.00</li>
+      <li class="product" data-name="Product 6" data-price="11.00">Product 6 <br/> $11.00</li>
+      <li class="product" data-name="Product 7" data-price="61.00">Product 7 <br/> $61.00</li>
+      <li class="product" data-name="Product 8" data-price="12.00">Product 8 <br/> $12.00</li>
+      <li class="product" data-name="Product 9" data-price="55.00">Product 9 <br/> $55.00</li>
     </ul>
   </div>
   <footer>
@@ -76,14 +72,16 @@
   </footer>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  
   <script src="js/jpager.js"></script>
   <script>
   <!--
     $(function(){
-      $(".products").jpager({limit:10});
+      var pager = $(".products").jpager();
+      $(".jpagesortable").change(function(){
+        $(".jpager").jpager_sort({sort:$(this).val()});
+      });
     });
   -->
   </script>
