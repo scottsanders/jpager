@@ -12,6 +12,36 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/style.css">
 
+  <style>
+  body {
+    padding: 20px 40px;
+  }
+  .products {
+    clear: left;
+    list-style: none;
+    width: 600px;
+    padding: 0;
+  }
+  .product {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+  .jpagination {
+    clear: left;
+    list-style: none;
+    padding: 10px 0;
+    height: 20px;
+  }
+  .jpaginate {
+    float: left;
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid black;
+  }
+  </style>
 </head>
 <body>
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -35,6 +65,10 @@
       <li class="product">Product 13</li>
       <li class="product">Product 14</li>
       <li class="product">Product 15</li>
+      <li class="product">Product 16</li>
+      <li class="product">Product 17</li>
+      <li class="product">Product 18</li>
+      <li class="product">Product 19</li>
     </ul>
   </div>
   <footer>
@@ -42,14 +76,14 @@
   </footer>
 
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
   <script src="js/jpager.js"></script>
   <script>
   <!--
     $(function(){
-      $(".products").jpager({limit:5});
+      $(".products").jpager({limit:10});
     });
   -->
   </script>
